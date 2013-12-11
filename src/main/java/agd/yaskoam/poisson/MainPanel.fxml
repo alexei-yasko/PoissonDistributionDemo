@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import agd.yaskoam.poisson.ProbabilityFunctionChartPanel?>
+<?import agd.yaskoam.poisson.DistributionFunctionChartPanel?>
+<?import agd.yaskoam.poisson.SettingsPanel?>
+<?import agd.yaskoam.poisson.StatusPanel?>
+
+<fx:root type="agd.yaskoam.poisson.MainPanel" xmlns:fx="http://javafx.com/fxml/1" prefHeight="800.0" prefWidth="1000.0"
+         stylesheets="/agd/yaskoam/poisson/style.css">
+
+    <SplitPane dividerPositions="0.85" focusTraversable="true" orientation="VERTICAL"  VBox.vgrow="ALWAYS">
+
+        <TabPane rotateGraphic="true" tabClosingPolicy="UNAVAILABLE">
+            <Tab text="Функция вероятности" >
+                <ProbabilityFunctionChartPanel fx:id="probabilityChartPanel"/>
+            </Tab>
+            <Tab text="Функция распределения" closable="false">
+                <DistributionFunctionChartPanel fx:id="distributionChartPanel"/>
+            </Tab>
+        </TabPane>
+
+        <SettingsPanel fx:id="settingsPanel"/>
+
+    </SplitPane>
+
+    <StatusPanel fx:id="statusPanel"/>
+
+</fx:root>

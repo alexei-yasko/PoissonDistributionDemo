@@ -1,0 +1,31 @@
+apply plugin: 'idea'
+apply plugin: 'java'
+apply from: "${rootProject.projectDir}/buildSrc/javafx.gradle"
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+    compile 'org.apache.commons:commons-math3:3.0'
+}
+
+sourceSets {
+	main {
+		java {
+			srcDir 'src/main/java'
+		}
+		resources {
+			srcDir 'src/main/resources'
+			srcDir 'src/main/java'
+		}
+	}
+}
+
+compileJava {
+	options.encoding = "UTF-8"
+}
+compileTestJava {
+	options.encoding = "UTF-8"
+}
+
